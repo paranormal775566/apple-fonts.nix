@@ -14,7 +14,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, sf-pro, sf-compact, sf-mono, sf-arabic, ny }:
+  outputs = { self, nixpkgs, flake-utils, sf-pro, sf-mono }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
       unpackPhase = pkgName: ''
